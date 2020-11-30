@@ -17,6 +17,7 @@ public class act5 {
 		
 		resu = num2;
 		
+		
 		return resu;
 	}
 	
