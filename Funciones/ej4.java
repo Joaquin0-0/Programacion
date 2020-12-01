@@ -6,8 +6,9 @@ public class ej4 {
 
 	static Scanner sc = new Scanner(System.in);
 
-	public static int primo(int num) {
-		int resu = 0;
+
+	public static boolean primo(int num) {
+		boolean resu = false;
 
 		int div = 0;
 
@@ -15,16 +16,13 @@ public class ej4 {
 			if((num % i) == 0) {
 				div++;
 				if (div == 3) {
-					resu = div;
+					resu = false;
 					break;
 				}else {
-					resu = 2;
+					resu = true;
 				}
 			}
 		}
-
-
-
 		return resu;
 	}
 
@@ -35,9 +33,9 @@ public class ej4 {
 		System.out.println("Dime un número: ");
 		num = sc.nextInt();
 
-		int resu = primo(num);
+		boolean resu = primo(num);
 
-		if (resu == 2) {
+		if (resu==true) {
 			System.out.println("Es primo");
 		}else {
 			System.out.println("No es primo");
