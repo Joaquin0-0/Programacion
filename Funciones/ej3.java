@@ -19,7 +19,6 @@ public class ej3 {
 			resu = resu/2;
 		}
 
-
 		return resu;
 	}
 
@@ -30,19 +29,22 @@ public class ej3 {
 
 		double radio;
 		double altura;
+		do {
+			System.out.println("Que quieres calcular?");
+			System.out.println("Area = 1     Volumen = 2");
+			areaVolumen = sc.nextInt();
 
-		System.out.println("Que quieres calcular?");
-		System.out.println("Area = 1     Volumen = 2");
-		areaVolumen = sc.nextInt();
+			if(areaVolumen == 1 || areaVolumen == 2) {
+				System.out.println("Dime el radio del cilindro:");
+				radio = sc.nextInt();
 
-		System.out.println("Dime el radio del cilindro:");
-		radio = sc.nextInt();
+				System.out.println("Dime la altura del cilindro: ");
+				altura = sc.nextInt();
 
-		System.out.println("Dime la altura del cilindro: ");
-		altura = sc.nextInt();
-
-		double resu1 = areaVl(radio, altura, areaVolumen);
-		System.out.println(resu1);
+				double resu1 = areaVl(radio, altura, areaVolumen);
+				System.out.println(resu1);
+			}
+		}while(areaVolumen == 1 || areaVolumen == 2);
 
 	}
 
